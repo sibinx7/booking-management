@@ -1,0 +1,20 @@
+[
+  {
+    "title":"Yoga and Pilate Traning",
+    "category":"Training",
+    "sub_category":"Fitness",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "80:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-one.jpg"
+  },
+  {
+    "title":"Hotel management course",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-two.jpg"
+  }
+]

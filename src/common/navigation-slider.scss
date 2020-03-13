@@ -1,0 +1,17 @@
+.navigation{
+  &__slider{
+    background: #008AB8;
+    a{
+      color: #fff;
+      font-weight: 600;    
+      text-decoration: none;
+      &:hover,&:active,
+      &:focus,&:active:focus{
+        text-decoration: none;
+      }
+      &.active{
+        text-decoration: underline;
+      }
+    }
+  }
+}

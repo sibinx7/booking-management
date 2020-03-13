@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+  },
+  {
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  }
+]
