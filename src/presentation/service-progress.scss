@@ -1,14 +1,95 @@
+@mixin service_list_rode() {
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 4px;
+  background: #ddd;
+  z-index: 1;
+  content:"";
+top: 37px;
+}
 .service{
   &__progress{
     &__list{
       display: -webkit-flex;
       display: flex;
       list-style: none;
+      margin: 0;
+      padding: 0;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      margin-right: -15px;
       li{
+        position: relative;
+        // padding-top: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #888;
         + li{
-          padding-left: 30px;
+          
+        }
+        &:not(:last-child){
+          &:after{
+            @include service_list_rode();
+            right: 0;
+          }
+        }
+        &:not(:first-child){
+          &:before{
+            @include service_list_rode();
+            left: 0;
+          }
+        }
+        &.request-active,
+        &.service-active{
+          color: #008AB8;
+          .progress__circle{
+            background: #9ECBDA;
+            .progress__icon{
+              display: inline;
+              svg{
+                fill: #fff;
+              }
+            }
+            .progress__number{
+              display: none
+            }
+          }
         }
       }      
+    }
+    &__item{
+      position: relative;
+      padding-top:30px;
+      .progress__icon{
+        svg{
+          width: 10px;
+          height: 10px;
+        }
+        display: none;
+      }
+      .progress__number{  
+        display: inline;
+        color: #fff;
+      }
+      
+      .progress__circle{
+        border: 1px solid #fff;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #DDDDDD;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        .progress__icon,
+        .progress__number{
+          // position: absolute;
+          font-size: 10px;
+        }
+      }
     }
   }
 }

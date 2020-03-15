@@ -49,6 +49,7 @@ const mapStateToProps = ({booking}) => {
   let booking_requested = [];
   try{    
     booking_requested = booking.filter((item) => item.status === "PENDING");    
+    // booking_requested = booking
   }catch(e){
 
   }

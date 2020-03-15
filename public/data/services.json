@@ -1,8 +1,8 @@
 [
   {
-    "title": "Example Service",
+    "title": "Example Service 1",
     "status":"PENDING",  
-    "previous_deals": 12,
+    "previous_deals": 42,
     "customer":{
       "personal":"",
       "availability":[],
@@ -13,7 +13,35 @@
     }
   },
   {
-    "title": "Example Service",
+    "title": "Example Service 2",
+    "status":"ACTIVE",  
+    "previous_deals": 11,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "title": "Example Service 3",
+    "status":"PENDING",  
+    "previous_deals": 42,
+    "customer":{
+      "personal":"",
+      "availability":[],
+      "location":{}
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "title": "Example Service 40",
     "status":"PENDING",  
     "previous_deals": 12,
     "customer":{
@@ -28,35 +56,7 @@
   },
   {
     "title": "Example Service",
-    "status":"PENDING",  
-    "previous_deals": 12,
-    "customer":{
-      "personal":"",
-      "availability":[],
-      "location":{}
-    },
-    "invoice":{
-      "price": 80.00
-    }
-
-  },
-  {
-    "title": "Example Service",
-    "status":"PENDING",  
-    "previous_deals": 12,
-    "customer":{
-      "personal":"",
-      "availability":[],
-      "location":{}
-    },
-    "invoice":{
-      "price": 80.00
-    }
-
-  },
-  {
-    "title": "Example Service",
-    "status":"PENDING",  
+    "status":"PAYMENT",  
     "previous_deals": 12,
     "customer":{
       "personal":"",

@@ -23,7 +23,7 @@ export  const ServiceCardProgress = ({status, date}) => {
           </div>
         </div>
         <div className="col-12 col-md-6">
-          <ServiceProgress/>
+          <ServiceProgress status={status}/>
         </div>
       </div>
     </div>

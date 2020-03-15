@@ -14,7 +14,7 @@
   },
   {
     "title": "Example Service",
-    "status":"PENDING",  
+    "status":"ACTIVE",  
     "previous_deals": 12,
     "customer":{
       "personal":"",
@@ -56,7 +56,7 @@
   },
   {
     "title": "Example Service",
-    "status":"PENDING",  
+    "status":"PAYMENT",  
     "previous_deals": 12,
     "customer":{
       "personal":"",
