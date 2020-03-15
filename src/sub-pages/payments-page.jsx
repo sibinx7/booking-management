@@ -8,11 +8,16 @@ class PaymentPage extends Component{
     const { booking_payment} = this.props;
     return(
       <div className="sub__pages page__request">
-        {
+          <div className="service__card__wrapper">
+          {
           booking_payment.map((data, index) => {
-            return <ServiceCard data={data} index={index}/>
+            return <div className="service__card__item" key={index}>
+              <ServiceCard data={data} index={index}/>
+              </div>
           })
         }
+          </div>
+        
       </div>
     )
   }

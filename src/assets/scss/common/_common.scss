@@ -31,3 +31,9 @@
     width: 36px;
   }
 }
+
+.img{
+  &-circle{
+    border-radius: 50%;
+  }
+}

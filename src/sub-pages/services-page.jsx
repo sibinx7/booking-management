@@ -16,11 +16,15 @@ class ServicesPage extends Component{
 
         </div>
         <div className="service__list">
-        {
+          <div className="service__card__wrapper">
+          {
           booking_service.map((data, index) => {
-            return <ServiceCard data={data} key={index}/>
+            return <div className="service__card__item" key={index}>
+              <ServiceCard data={data} key={index}/>
+              </div>
           })
         }
+          </div>        
         </div>        
       </div>
     )

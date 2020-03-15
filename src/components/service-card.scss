@@ -1,0 +1,11 @@
+.service{
+  &__card{
+    padding: 20px;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    box-shadow: 1px 2px 6px 4px #eee;
+    &__title{
+      color: #D16800;
+    }
+  }
+}

@@ -1,53 +1,34 @@
 [
   {
-    "title": "Example Service 1",
-    "status":"PENDING",  
-    "previous_deals": 42,
-    "customer":{
-      "personal":"",
-      "availability":[],
-      "location":{}
-    },
-    "invoice":{
-      "price": 80.00
-    }
-  },
-  {
-    "title": "Example Service 2",
-    "status":"ACTIVE",  
-    "previous_deals": 11,
-    "customer":{
-      "personal":"",
-      "availability":[],
-      "location":{}
-    },
-    "invoice":{
-      "price": 80.00
-    }
-
-  },
-  {
-    "title": "Example Service 3",
-    "status":"PENDING",  
-    "previous_deals": 42,
-    "customer":{
-      "personal":"",
-      "availability":[],
-      "location":{}
-    },
-    "invoice":{
-      "price": 80.00
-    }
-
-  },
-  {
-    "title": "Example Service 40",
+    "id":1,
+    "title": "Example Service",
     "status":"PENDING",  
     "previous_deals": 12,
     "customer":{
-      "personal":"",
+      "personal":{
+        "full_name": "David Billa",
+        "profile_image": "profile-1.jpg"
+      },
       "availability":[],
-      "location":{}
+      "location":"Miami"
+    },
+    "invoice":{
+      "price": 80.00
+    }
+  },
+  {
+    "id": 2,
+    "title": "Example Service",
+    "status":"ACTIVE",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name":"Aleena Paul",
+        "profile_image": "profile-2.jpg"
+
+      },
+      "availability":[],
+      "location":"Newyork"
     },
     "invoice":{
       "price": 80.00
@@ -55,13 +36,53 @@
 
   },
   {
+    "id": 3,
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name":"Mandoose",
+        "profile_image": "profile-3.jpg"
+      },
+      "availability":[],
+      "location":"New jersy"
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "id": 4,
+    "title": "Example Service",
+    "status":"PENDING",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name": "John Doe",
+        "profile_image": "profile-4.jpg"
+      },
+      "availability":[],
+      "location":"Philadalphia"
+    },
+    "invoice":{
+      "price": 80.00
+    }
+
+  },
+  {
+    "id": 5,
     "title": "Example Service",
     "status":"PAYMENT",  
     "previous_deals": 12,
     "customer":{
-      "personal":"",
+      "personal":{
+        "full_name": "Danny D",
+        "profile_image": "profile-5.jpg"
+      },
       "availability":[],
-      "location":{}
+      "location":"San Fransico"
     },
     "invoice":{
       "price": 80.00
