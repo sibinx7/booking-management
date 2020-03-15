@@ -1,0 +1,5 @@
+export const SERVICE_STATUS = {
+  "PENDING":"PENDING",
+  "ACTIVE":"ACTIVE",
+  "PAYMENT":"PAYMENT"
+}

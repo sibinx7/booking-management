@@ -1,5 +1,5 @@
 import {  ServiceAPI } from "../apis/requests/service.api";
-let bookingData = {};
+let bookingData = [];
 
 
 
@@ -7,7 +7,7 @@ export const booking = {
   state:bookingData,
   reducers:{
     setBooking(state, payload){
-      return payload;
+      return [...state, ...payload];
     },
     updateBooking(state,payload){
 
@@ -20,6 +20,8 @@ export const booking = {
     async fetchServices(payload, rootState){
       ServiceAPI.getServices()
         .then((response) => {
+          console.log(response)
+          console.log("AXIOS called...")
           dispatch.booking.setBooking(response);
         }, (error) => {
 

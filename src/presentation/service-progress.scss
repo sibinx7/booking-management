@@ -3,8 +3,11 @@
     &__list{
       display: -webkit-flex;
       display: flex;
+      list-style: none;
       li{
-        
+        + li{
+          padding-left: 30px;
+        }
       }      
     }
   }

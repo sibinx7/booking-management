@@ -1,12 +1,16 @@
 import React, { Component } from "react";
+import { Switch,Route, Redirect } from "react-router-dom";
+import {  connect } from "react-redux";
+
 import {  ServiceCarousel } from "../presentation/service-slider";
 import { NavigationSlider } from "../common/navigation-slider";
-import { Switch,Route, Redirect } from "react-router-dom";
 import { mainRoutes } from "../routes";
 class IndexPage extends Component{
 
   componentDidMount(){
-
+    const { fetchServices } = this.props;
+    /* Fetch call and get book services lists */
+    fetchServices();
   }
 
   render(){
@@ -43,11 +47,11 @@ const mapStateToProps = ({}) => {
   return {}
 };
 
-const mapDispatchToProps = ({}) => {
+const mapDispatchToProps = ({booking:{fetchServices}}) => {
   return {
-
+    fetchServices
   }
 }
  
 
-export default connect()(IndexPage);
+export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);

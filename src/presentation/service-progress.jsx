@@ -1,6 +1,9 @@
 import React from "react";
-import {classnames} from "classnames";
-import "./service-progress";
+import  * as classNames from "classnames";
+
+
+import { CorrectSVG } from "../assets/svgs"
+import "./service-progress.scss";
 
 export const ServiceProgress = ({status, date}) => {
 
@@ -19,15 +22,15 @@ export const ServiceProgress = ({status, date}) => {
   }
 
 
-  const isRequestClass = classnames({
+  const isRequestClass = classNames({
     "request-active": isRequest
   });
 
-  const isServiceClass = classnames({
+  const isServiceClass = classNames({
     "service-active": isService
   });
 
-  const isPaymentClass = classnames({
+  const isPaymentClass = classNames({
     "payment-active": isPayment
   })
 
@@ -41,16 +44,29 @@ export const ServiceProgress = ({status, date}) => {
       <div className="service__progress">
         <ul className="service__progress__list">
           <li className={isRequestClass}>
-            <div className="service__progress__item"><h6>Request</h6>
+            <div className="service__progress__item">
+              <span className="progress__circle">
+              <CorrectSVG/>
+              <span>1</span>
+              </span> 
+              <h6>Request</h6>
             </div>
           </li>
           <li className={isServiceClass}>
 <div className="service__progress__item">
+<span className="progress__circle">
+              <CorrectSVG/>
+              <span>2</span>
+              </span> 
               <h6>Service</h6>
             </div>
           </li>
           <li className={isPaymentClass}>
           <div className="service__progress__item">
+          <span className="progress__circle">
+              <CorrectSVG/>
+              <span>3</span>
+              </span> 
               <h6>Payment</h6>
               </div>
           </li>
