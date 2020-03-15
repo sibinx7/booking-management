@@ -5,6 +5,9 @@ import ServiceCard from "../components/service-card";
 
 class RequestPage extends Component{
 
+  state = {
+    
+  }
 
   componentDidUpdate(){
 

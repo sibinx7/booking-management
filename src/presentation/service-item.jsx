@@ -11,7 +11,9 @@ export const ServiceItem = ({ title, category, sub_category, description, price,
   return(
     <div className="service__item">
       <div className="service__image">
+      <div className="service__image__bg" style={{backgroundImage: `url(${imagePath})`}}>
         <img src={imagePath} alt={title}/>
+      </div>
       </div>
       <div className="service__content">
         <h4 className="title">{title}</h4>

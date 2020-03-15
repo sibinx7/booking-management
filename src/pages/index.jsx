@@ -15,8 +15,10 @@ class IndexPage extends Component{
 
   render(){
     return(
-      <div>
-        {/* Common Sections */}
+      <div className="container-wrapper">
+      
+        <div className="page__common">
+          {/* Common Sections */}
           {/* Pagination Carousel */}
           <NavigationSlider/>
           {/* end Pagination Carousel */}
@@ -24,7 +26,12 @@ class IndexPage extends Component{
           <ServiceCarousel/>
           {/* end Service Carousel */}
         {/* end Common Sections */}
-        <Switch>
+        </div>        
+        <div className="page__dynamic pt-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+              <Switch>
           {
             mainRoutes.reverse().map((route, index) => {
 
@@ -36,7 +43,10 @@ class IndexPage extends Component{
           }
           <Redirect to="/requests"/>
         </Switch>
-
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

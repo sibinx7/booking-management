@@ -6,7 +6,7 @@
     "description":"This yoga and pilate training session is designed for all levels of trainees",
     "price": "80:00",
     "specification": "Fir one session",
-    "thumbnail":"slider-one.jpg"
+    "thumbnail":"slider-1.jpg"
   },
   {
     "title":"Hotel management course",
@@ -15,6 +15,51 @@
     "description":"This yoga and pilate training session is designed for all levels of trainees",
     "price": "50:00",
     "specification": "Fir one session",
-    "thumbnail":"slider-two.jpg"
+    "thumbnail":"slider-2.jpg"
+  },
+  {
+    "title":"School Teacher",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-3.jpg"
+  },
+  {
+    "title":"Bank Management",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-4.jpg"
+  },
+  {
+    "title":"Software Professional course",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-5.jpg"
+  },
+  {
+    "title":"Civilian pilot course",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-6.jpg"
+  },
+  {
+    "title":"Lawyer course",
+    "category":"Training",
+    "sub_category":"Hotel",
+    "description":"This yoga and pilate training session is designed for all levels of trainees",
+    "price": "50:00",
+    "specification": "Fir one session",
+    "thumbnail":"slider-7.jpg"
   }
 ]

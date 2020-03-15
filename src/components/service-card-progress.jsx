@@ -12,7 +12,7 @@ export  const ServiceCardProgress = ({status, date}) => {
   
 
   return (
-    <div classname="service__card__progress">
+    <div className="service__card__progress">
       <div className="row">
         <div className="col-12 col-md-6">
           <div className="service__status">
