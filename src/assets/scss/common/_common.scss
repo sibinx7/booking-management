@@ -1,0 +1,33 @@
+.dropdown-notification{
+  &.dropdown-menu{
+    min-width: 360px;
+    .dropdown-item{
+      white-space: normal;
+      cursor: pointer;
+    }
+  }
+}
+
+.circle{
+  border-radius: 50%;
+}
+
+
+.notification-present{
+  position: relative;
+  .notification--red{
+    background: #D10000;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 4px;
+  }
+}
+
+.logo-lg-36{
+  @media all and (min-width: 1200px){
+    width: 36px;
+  }
+}

@@ -19,7 +19,8 @@ class ServiceCard extends Component{
         {/* end Top Information Section */}
         {/* User and Deal Information */}
         {/* end User and Deal Information */}
-        {/* Dynamic section depend on Status */}        
+        {/* Dynamic section depend on Status */}       
+         
         {/* end Dynamic section depend on Status */}
       </div>
     )

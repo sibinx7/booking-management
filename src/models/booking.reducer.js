@@ -12,6 +12,19 @@ export const booking = {
     updateBooking(state,payload){
 
     },
+    changeStatus(state, payload){
+      const { data, status } = payload;
+      const findUpdatedIndex = state.findIndex((item) => {
+        return item.id === data.id;
+      })
+
+      state[findUpdatedIndex] = {
+        ...state[findUpdatedIndex],
+        ...data,
+        status  
+      }
+      return [...state]        
+    },
     removeBooking(state, payload){
       return [];
     }

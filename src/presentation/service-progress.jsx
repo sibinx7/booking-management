@@ -39,9 +39,7 @@ export const ServiceProgress = ({status, date}) => {
   return (
     <div className="service__progress">
       <div className="service__info">
-        {
-          status
-        }
+        
       </div>
       <div className="service__progress">
         <ul className="service__progress__list">
