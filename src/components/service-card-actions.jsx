@@ -105,8 +105,56 @@ export class ServiceRequestAction extends Component{
 
 
   render(){
+    const { data = {}} = this.props;
+    const { customer = {}} = data;
+    const { available, address, location } = customer;
     return(
-      <div className="service__card__action">
+      <div className="service__card__action">        
+        <div className="service__body__content">
+          <p className="mb-0 text-d-grey">
+            Check in here or scan customer's QR Code to check in when 
+            the service is about to start
+          </p>
+          <div className="media media__date">
+            <div className="media-left mr-2">
+              <span className="fa fa-clock media__icon"></span>
+            </div>
+            <div className="media-body">
+              <ul className="service__body__date">
+                {
+                  available.map((item, index) => {
+                    return (
+                      <li>
+                        <p className="mb-0">
+                          {
+                            item.time
+                          },
+                          {
+                            item.date 
+                          }
+                        </p>
+                      </li>
+                    )
+                  })
+                }
+                
+              </ul>
+            </div>
+          </div>
+          {/* Location and Address */}
+          <div className="media media__location">
+             <div className="media-left mr-2 media__icon">
+                <span className="fa fa-map-marker"></span>
+             </div>
+             <div className="media-body">
+                {
+                  address 
+                }
+             </div>
+           </div>
+           {/* end Location and Address */}
+
+        </div>
 <div className="footer__button">
            <button className="btn btn-primary" onClick={ (e) => {
              this.handleCheckIn(e)
@@ -139,10 +187,40 @@ export class PaymentRequestAction extends Component{
 
 
   render(){
+
+    const { data = {}} = this.props;
+    const { invoice } = data;
+
     return(
       <div className="service__card__action">
+        <div className="service__body__content">
+          <p className="mb-0 text-d-grey">Service is complete, please confirm payment amount:</p>
+          <div className="content__list">
+            <div className="media media__invoice">
+              <div className="media-left mr-2">
+                <span className="media__icon fa fa-money fa-money-bill"></span>
+                </div>
+                <div className="media-body">
+                  <h6>Invoice Item:</h6>
+                  <div className="row">
+                    <div className="col-12 col-md-6">
+                      <p>Session price</p>
+                    </div>
+                    <div className="col-12 col-md-6">
+                      <p>
+                        <span className="money-highlight">
+                          $
+                          { invoice.price }
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
         <div className="footer__button">
-           <button className="btn btn-primary btn-primary" onClick={ (e) => {
+           <button className="btn btn-outline-primary btn-outline" onClick={ (e) => {
              this.resendInvoice(e)
            }}>
             Resend Invoice 

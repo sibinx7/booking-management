@@ -39,7 +39,7 @@ export const booking = {
         ...data,
         status  
       }
-      return [...state]        
+      return {...state}       
     },
     removeBooking(state, payload){
       return {

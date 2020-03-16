@@ -51,6 +51,12 @@
           "end_time": "2:00 pm"
         }
       ],
+      "available": [
+        {
+          "date":"Sunday, December 29th, 2019",
+          "time": "1:00 pm"
+        }
+      ],
       "location":"Newyork",
       "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
@@ -62,7 +68,7 @@
   {
     "id": 3,
     "title": "Example Service",
-    "status":"PENDING",  
+    "status":"PAYMENT",  
     "previous_deals": 12,
     "customer":{
       "personal":{
