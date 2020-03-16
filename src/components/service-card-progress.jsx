@@ -14,7 +14,7 @@ export  const ServiceCardProgress = ({status, date}) => {
   return (
     <div className="service__card__progress mb-4">
       <div className="row">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-sm-6 col-md-6">
           <div className="service__status">
             <h5 className="service__card__title">{getCurrentStatus(status)}</h5>
           </div>
@@ -22,7 +22,7 @@ export  const ServiceCardProgress = ({status, date}) => {
             <span>{dayFormat}</span>
           </div>
         </div>
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-sm-6 col-md-6">
           <ServiceProgress status={status}/>
         </div>
       </div>

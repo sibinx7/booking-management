@@ -26,10 +26,10 @@ export const ServiceItem = ({ title, category, sub_category, description, price,
           {description}
         </p>
         <div className="row">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-sm-6 col-md-6">
             <p className="mb-0">{specification}</p>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-sm-6 col-md-6">
             <span>{price}</span>
           </div>
         </div>

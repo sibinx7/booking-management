@@ -7,7 +7,7 @@ export const ServiceCardUser = ({ customer, previous_deals }) => {
   const previousDealComponent = useMemo(() => {
     return (
       <div className="media">
-        <div className="media-left">
+        <div className="media-left mr-2">
           <ShakeHand/>
         </div>
         <div className="media-body">
@@ -25,9 +25,9 @@ export const ServiceCardUser = ({ customer, previous_deals }) => {
   const profilePath = require(`../assets/images/customer/${profile_image}`);
 
   return(
-    <div className="card__user">
+    <div className="card__user mb-4 mb-md-2">
       <div className="row">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-sm-6 col-md-6">
           <div className="media user__media">
             <div className="media-left mr-3">
               <picture>
@@ -40,7 +40,7 @@ export const ServiceCardUser = ({ customer, previous_deals }) => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-sm-6 col-md-6">
           {
             previousDealComponent
           }

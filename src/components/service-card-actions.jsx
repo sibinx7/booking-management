@@ -25,7 +25,7 @@
 
      return(
        <div className="service__card__action">
-         <div className="body__content service__body__content">
+         <div className="body__content service__body__content mb-4 mb-md-2">
            {/* Date and Time */}
            <div className="media media__date">
              <div className="media-left mr-2">
@@ -38,12 +38,12 @@
                     return (
                       <li>
                         <div className="row">
-                          <div className="col-12 col-md-7 col-lg-7">
+                          <div className="col-12 col-sm-7 col-md-7 col-lg-7">
                             {
                               item.date
                             }
                           </div>
-                          <div className="col-12 col-md-5 col-llg-5">
+                          <div className="col-12 col-sm-5 col-md-5 col-llg-5">
                             <p className="mb-0">
                               {item.start_time} - { item.end_time }
                             </p>
@@ -72,7 +72,7 @@
            </div>
            {/* end Location and Address */}
          </div>
-         <div className="footer__button">
+         <div className="footer__button clearfix">
            <button className="btn btn-primary" onClick={ (e) => {
              this.handleAcceptRequest(e)
            }}>
@@ -81,7 +81,7 @@
            <button className="btn btn-outline btn-outline-primary ml-2" onClick={e => this}>
             Reschedule 
            </button>
-           <button className="btn btn-link text-center">
+           <button className="btn btn-link text-center float-right btn-more">
             <span className="fa fa-ellipsis-h"></span>
             <br/>
             More
@@ -110,7 +110,7 @@ export class ServiceRequestAction extends Component{
     const { available, address, location } = customer;
     return(
       <div className="service__card__action">        
-        <div className="service__body__content">
+        <div className="service__body__content mb-4 mb-md-2">
           <p className="mb-0 text-d-grey">
             Check in here or scan customer's QR Code to check in when 
             the service is about to start
@@ -122,7 +122,7 @@ export class ServiceRequestAction extends Component{
             <div className="media-body">
               <ul className="service__body__date">
                 {
-                  available.map((item, index) => {
+                  available.length &&  available.map((item, index) => {
                     return (
                       <li>
                         <p className="mb-0">
@@ -155,7 +155,7 @@ export class ServiceRequestAction extends Component{
            {/* end Location and Address */}
 
         </div>
-<div className="footer__button">
+<div className="footer__button clearfix">
            <button className="btn btn-primary" onClick={ (e) => {
              this.handleCheckIn(e)
            }}>
@@ -164,7 +164,7 @@ export class ServiceRequestAction extends Component{
            <button className="btn btn-outline btn-outline-primary ml-2" onClick={e => this.generateInvoice(e)}>
             Generate Invoice 
            </button>
-           <button className="btn btn-link text-center">
+           <button className="btn btn-link text-center float-right btn-more">
             <span className="fa fa-ellipsis-h"></span>
             <br/>
             More
@@ -193,7 +193,7 @@ export class PaymentRequestAction extends Component{
 
     return(
       <div className="service__card__action">
-        <div className="service__body__content">
+        <div className="service__body__content mb-4 mb-md-2">
           <p className="mb-0 text-d-grey">Service is complete, please confirm payment amount:</p>
           <div className="content__list">
             <div className="media media__invoice">
@@ -219,7 +219,7 @@ export class PaymentRequestAction extends Component{
             </div>
           </div>
         </div>
-        <div className="footer__button">
+        <div className="footer__button clearfix">
            <button className="btn btn-outline-primary btn-outline" onClick={ (e) => {
              this.resendInvoice(e)
            }}>
@@ -228,7 +228,7 @@ export class PaymentRequestAction extends Component{
            <button className="btn btn-outline btn-outline-primary ml-2" onClick={e => this.startChat(e)}>
             Start a Chat 
            </button>
-           <button className="btn btn-link text-center">
+           <button className="btn btn-link text-center float-right btn-more">
             <span className="fa fa-ellipsis-h"></span>
             <br/>
             More
