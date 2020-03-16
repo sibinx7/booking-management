@@ -55,7 +55,7 @@ export const MainHeader = () => {
               </form>
         </div>
         <div className="mobile-center-block">
-          <a href="">
+          <a href="/">
             <img src={headerLogo} alt="Main header logo"/>
           </a>
         </div>        
@@ -85,13 +85,10 @@ export const MainHeader = () => {
         </div>        
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <a className="navbar-brand ml-0 d-none d-lg-block" href="#">
+          <a className="navbar-brand ml-0 d-none d-lg-block" href="/">
             <img src={headerLogo} className="logo-lg-36" alt="Trova"/>
           </a>
-          <ul className="navbar-nav mr-auto ml-lg-0">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
+          <ul className="navbar-nav mr-auto ml-lg-0">            
             <li className="nav-item">
               <form action="" onSubmit={(e) => handleSubmit(e)}>
                 <div className="input-group">
