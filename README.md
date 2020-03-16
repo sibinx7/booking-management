@@ -2,6 +2,10 @@
 
 **Create React App** to generate react application. **Node-SASS** is use style.
 
+### Live Demo
+
+[Demo](https://booking-management-x777.herokuapp.com/) application live on **Heroku**. Most of the features can be find on this demo website.
+
 
 
 ### Application Details
