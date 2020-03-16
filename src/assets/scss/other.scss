@@ -15,7 +15,7 @@
         padding-left: 15px;
         padding-right: 15px;
       }
-      @media all and (max-width: 767px){
+      @media all and (max-width: 991px){
         .service__card__item{
           -webkit-flex-basis: 100%;
           flex-basis: 100%; 
@@ -24,4 +24,17 @@
       }
     }
   }
+}
+
+.d-mobile-only-header{
+  @media all and (max-width: 991px){
+    display: flex;
+    width: calc(100% - 60px);
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+
+  }
+  
 }
