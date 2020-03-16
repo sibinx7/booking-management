@@ -9,8 +9,20 @@
         "full_name": "David Billa",
         "profile_image": "profile-1.jpg"
       },
-      "availability":[],
-      "location":"Miami"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"Miami",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -27,8 +39,20 @@
         "profile_image": "profile-2.jpg"
 
       },
-      "availability":[],
-      "location":"Newyork"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"Newyork",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -45,8 +69,20 @@
         "full_name":"Mandoose",
         "profile_image": "profile-3.jpg"
       },
-      "availability":[],
-      "location":"New jersy"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"New jersy",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -63,8 +99,20 @@
         "full_name": "John Doe",
         "profile_image": "profile-4.jpg"
       },
-      "availability":[],
-      "location":"Philadalphia"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"Philadalphia",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -81,8 +129,20 @@
         "full_name": "Danny D",
         "profile_image": "profile-5.jpg"
       },
-      "availability":[],
-      "location":"San Fransico"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"San Fransico",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -98,8 +158,20 @@
         "full_name": "Johny",
         "profile_image": "profile-5.jpg"
       },
-      "availability":[],
-      "location":"San Fransico"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"San Fransico",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -115,8 +187,20 @@
         "full_name": "Mia John",
         "profile_image": "profile-5.jpg"
       },
-      "availability":[],
-      "location":"San Fransico"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"San Fransico",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00
@@ -132,8 +216,20 @@
         "full_name": "Sasi",
         "profile_image": "profile-5.jpg"
       },
-      "availability":[],
-      "location":"San Fransico"
+      "availability":[
+        {
+          "date": "Sunday, December 22nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        },
+        {
+          "date": "Sunday, December 29nd, 2019",
+          "start_time": "9:00 am",
+          "end_time": "2:00 pm"
+        }
+      ],
+      "location":"San Fransico",
+      "address":"50 Hagiwara Tea Garden Dr, San Francisco, CA 94118"
     },
     "invoice":{
       "price": 80.00

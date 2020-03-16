@@ -27,16 +27,16 @@ class ServiceCard extends Component{
 
     const { data } = this.props;
     
-    let dynamicActionComponent = <PendingRequestAction acceptRequestAction={ this.handleAcceptRequest }/>;
+    let dynamicActionComponent = <PendingRequestAction  data={data} acceptRequestAction={ this.handleAcceptRequest }/>;
     switch(data.status){
       case "PENDING":
-        dynamicActionComponent = <PendingRequestAction acceptRequestAction={ this.handleAcceptRequest }/>;
+        dynamicActionComponent = <PendingRequestAction  data={data} acceptRequestAction={ this.handleAcceptRequest }/>;
         break;
       case "ACTIVE":
-        dynamicActionComponent = <ServiceRequestAction generateInvoiceAction={ this.handleGenerateInvoice}/>;
+        dynamicActionComponent = <ServiceRequestAction  data={data} generateInvoiceAction={ this.handleGenerateInvoice}/>;
         break;
       case "PAYMENT":
-        dynamicActionComponent = <PaymentRequestAction/>;
+        dynamicActionComponent = <PaymentRequestAction data={data} />;
         break;
       default:      
         break;

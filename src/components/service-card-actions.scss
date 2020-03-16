@@ -1,0 +1,25 @@
+.service{
+  &__body{
+    &__content{
+      .media{
+        .media__icon{
+          color: #9ECBDA;
+        }
+      }
+      .media__location{
+        .media-body{
+          color: #008AB8;
+          font-weight: 600;
+        }
+      }
+    }
+    &__date{
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+      li{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

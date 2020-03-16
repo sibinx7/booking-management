@@ -6,6 +6,8 @@
  import React, {  Component } from "react";
 
 
+ import "./service-card-actions.scss";
+
  export class PendingRequestAction extends Component{
 
 
@@ -16,8 +18,60 @@
   }
 
    render(){
+
+    const { data } = this.props;
+    const { customer={} } = data;
+    const { availability, address } = customer;
+
      return(
        <div className="service__card__action">
+         <div className="body__content service__body__content">
+           {/* Date and Time */}
+           <div className="media media__date">
+             <div className="media-left mr-2">
+              <span className="fa fa-clock media__icon"></span>
+             </div>
+             <div className="media-body">
+              <ul className="service__body__date">
+                {
+                  availability.map((item, index) => {
+                    return (
+                      <li>
+                        <div className="row">
+                          <div className="col-12 col-md-7 col-lg-7">
+                            {
+                              item.date
+                            }
+                          </div>
+                          <div className="col-12 col-md-5 col-llg-5">
+                            <p className="mb-0">
+                              {item.start_time} - { item.end_time }
+                            </p>
+
+                          </div>
+                        </div>
+                      </li>
+                    )
+                  })
+                }
+                
+              </ul>
+             </div>
+           </div>
+           {/* end Date and Time */}
+           {/* Location and Address */}
+           <div className="media media__location">
+             <div className="media-left mr-2 media__icon">
+                <span className="fa fa-map-marker"></span>
+             </div>
+             <div className="media-body">
+                {
+                  address 
+                }
+             </div>
+           </div>
+           {/* end Location and Address */}
+         </div>
          <div className="footer__button">
            <button className="btn btn-primary" onClick={ (e) => {
              this.handleAcceptRequest(e)
