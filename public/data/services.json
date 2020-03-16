@@ -87,6 +87,56 @@
     "invoice":{
       "price": 80.00
     }
-
+  },
+  {
+    "id": 6,
+    "title": "Example Service 6",
+    "status":"PAYMENT",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name": "Johny",
+        "profile_image": "profile-5.jpg"
+      },
+      "availability":[],
+      "location":"San Fransico"
+    },
+    "invoice":{
+      "price": 80.00
+    }
+  },
+  {
+    "id": 7,
+    "title": "Example Service 6",
+    "status":"PAYMENT",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name": "Mia John",
+        "profile_image": "profile-5.jpg"
+      },
+      "availability":[],
+      "location":"San Fransico"
+    },
+    "invoice":{
+      "price": 80.00
+    }
+  },
+  {
+    "id": 8,
+    "title": "Example Service 6",
+    "status":"PAYMENT",  
+    "previous_deals": 12,
+    "customer":{
+      "personal":{
+        "full_name": "Sasi",
+        "profile_image": "profile-5.jpg"
+      },
+      "availability":[],
+      "location":"San Fransico"
+    },
+    "invoice":{
+      "price": 80.00
+    }
   }
 ]

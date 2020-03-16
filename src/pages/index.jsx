@@ -10,7 +10,7 @@ class IndexPage extends Component{
   componentDidMount(){
     const { fetchServices } = this.props;
     /* Fetch call and get book services lists */
-    fetchServices();
+    fetchServices({page:1});
   }
 
   render(){

@@ -7,8 +7,14 @@ import ServiceCard from "../components/service-card";
  * and state and props change using router props
  */
 class ServicesPage extends Component{
+  loadMoreData = (e) => {
+    const { meta, fetchServices } = this.props;
+    fetchServices((meta.page + 1))
+  }
+  
   render(){
-    const { booking_service } = this.props;
+    const { booking_service, meta } = this.props;
+    const has_more = meta.total > meta.loaded  
 
     return(
       <div className="sub__pages page__request">
@@ -25,7 +31,21 @@ class ServicesPage extends Component{
           })
         }
           </div>        
-        </div>        
+        </div>   
+        <div className="service__card__more">          
+          {
+            !has_more ? (
+              <p className="mb-5 text-center no-more-data">No more service requests</p>
+            ): <p className="mb- text-center">
+              <button className="btn btn-sm btn-default" onClick = {
+                e => this.loadMoreData(e)
+              }>
+                <span className="fa fa-plus"></span>
+                Load more
+              </button>
+            </p>
+          }
+        </div>     
       </div>
     )
   }
@@ -34,12 +54,19 @@ class ServicesPage extends Component{
 
 const mapStateToProps = ({booking}) => {
 
-  const booking_service = booking.filter((item) => item.status === "ACTIVE")
+  const booking_service = booking.data.filter((item) => item.status === "ACTIVE")
 
   return{
-    booking_service
+    booking_service,
+    meta: booking.meta 
+  }
+}
+
+const mapDispatchToProps = ({booking:{fetchServices}}) => {
+  return {
+    fetchServices
   }
 }
 
 
-export default connect(mapStateToProps, null)(ServicesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ServicesPage);

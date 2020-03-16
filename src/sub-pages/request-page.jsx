@@ -16,9 +16,12 @@ class RequestPage extends Component{
   }
 
 
-  static getDerivedStateFromProps(props, s){
-    console.log("On State")
-    console.log(props)
+  loadMoreData = (e) => {
+    const { meta, fetchServices } = this.props;
+    fetchServices((meta.page + 1))
+  }
+
+  static getDerivedStateFromProps(props, s){    
     let stateData = null;
     try{
       stateData = {};
@@ -31,8 +34,8 @@ class RequestPage extends Component{
 
   render(){
 
-    const { booking_requested } = this.props;
-    const { has_more } = this.state;
+    const { booking_requested, meta } = this.props;
+    const has_more = meta.total > meta.loaded  
 
     return(
       <div className="sub__pages page__request">        
@@ -49,12 +52,14 @@ class RequestPage extends Component{
           })
         }
         </div>              
-        <div className="service__card__more">
+        <div className="service__card__more">          
           {
             !has_more ? (
-              <p className="mb-0">No more service requests</p>
-            ): <p className="mb-0 text-center">
-              <button className="btn btn-sm btn-default">
+              <p className="mb-5 text-center no-more-data">No more service requests</p>
+            ): <p className="mb- text-center">
+              <button className="btn btn-sm btn-default" onClick = {
+                e => this.loadMoreData(e)
+              }>
                 <span className="fa fa-plus"></span>
                 Load more
               </button>
@@ -68,21 +73,22 @@ class RequestPage extends Component{
 
 const mapStateToProps = ({booking}) => {
 
-  let booking_requested = [];
+  let booking_requested = {};
   try{    
-    booking_requested = booking.filter((item) => item.status === "PENDING");    
+    booking_requested = booking.data.filter((item) => item.status === "PENDING");    
     // booking_requested = booking
   }catch(e){
 
   }
   return {
-    booking_requested
+    booking_requested,
+    meta: booking.meta 
   }
 }
 
-const mapDispatchToProps = ({}) => {
+const mapDispatchToProps = ({booking:{fetchServices}}) => {
   return {
-
+    fetchServices
   }
 }
 
