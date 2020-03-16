@@ -42,7 +42,7 @@ export const MainHeader = () => {
                   <div className="input-group-append">
                    {
                      activeForm && (
-                       <button classname="btn btn-default" onClick={e => resetSearchForm(e)}>
+                       <button className="btn btn-default" onClick={e => resetSearchForm(e)}>
                          <span className="fa fa-times"></span>
                        </button>
                      )
@@ -101,7 +101,7 @@ export const MainHeader = () => {
                   <div className="input-group-append">
                    {
                      activeForm && (
-                       <button classname="btn btn-default" onClick={e => resetSearchForm(e)}>
+                       <button className="btn btn-default" onClick={e => resetSearchForm(e)}>
                          <span className="fa fa-times"></span>
                        </button>
                      )

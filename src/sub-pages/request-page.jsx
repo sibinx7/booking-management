@@ -57,10 +57,10 @@ class RequestPage extends Component{
             !has_more ? (
               <p className="mb-5 text-center no-more-data">No more service requests</p>
             ): <p className="mb- text-center">
-              <button className="btn btn-sm btn-default" onClick = {
+              <button className="btn btn-sm btn-success" onClick = {
                 e => this.loadMoreData(e)
               }>
-                <span className="fa fa-plus"></span>
+                <span className="fa fa-plus"></span>&nbsp;
                 Load more
               </button>
             </p>
