@@ -3,7 +3,10 @@ import type {
   AuthResponse,
   EmailLoginRequest,
   GoogleLoginRequest,
+  RegisterRequest,
+  SendEmailOtpRequest,
   SendWhatsappOtpRequest,
+  VerifyEmailOtpRequest,
   VerifyWhatsappOtpRequest,
 } from '@/types/auth';
 
@@ -40,6 +43,32 @@ export const authApi = createApi({
       invalidatesTags: ['Auth'],
     }),
 
+    sendEmailOtp: builder.mutation<AuthResponse, SendEmailOtpRequest>({
+      query: (data) => ({
+        url: '/auth/email/send-otp',
+        method: 'POST',
+        body: data,
+      }),
+    }),
+
+    verifyEmailOtp: builder.mutation<AuthResponse, VerifyEmailOtpRequest>({
+      query: (data) => ({
+        url: '/auth/email/verify-otp',
+        method: 'POST',
+        body: data,
+      }),
+      invalidatesTags: ['Auth'],
+    }),
+
+    registerUser: builder.mutation<AuthResponse, RegisterRequest>({
+      query: (data) => ({
+        url: '/auth/register',
+        method: 'POST',
+        body: data,
+      }),
+      invalidatesTags: ['Auth'],
+    }),
+
     loginWithGoogle: builder.mutation<AuthResponse, GoogleLoginRequest>({
       query: (data) => ({
         url: '/auth/google',
@@ -55,5 +84,8 @@ export const {
   useLoginWithEmailMutation,
   useSendWhatsappOtpMutation,
   useVerifyWhatsappOtpMutation,
+  useSendEmailOtpMutation,
+  useVerifyEmailOtpMutation,
+  useRegisterUserMutation,
   useLoginWithGoogleMutation,
 } = authApi;

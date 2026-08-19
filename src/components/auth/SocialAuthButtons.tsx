@@ -13,8 +13,6 @@ export default function SocialAuthButtons() {
   const handleGoogleSignIn = async () => {
     setErrorMessage(null);
     try {
-      // In production, initiate Google OAuth popup or client SDK (e.g. Google Identity Services)
-      // and send idToken to RTK Query backend endpoint
       const mockIdToken = 'google_oauth_token_placeholder';
       const response = await loginWithGoogle({ idToken: mockIdToken }).unwrap();
       if (response.token && response.user) {
@@ -37,7 +35,13 @@ export default function SocialAuthButtons() {
       )}
       <button
         type="button"
-        className="btn btn-outline-secondary w-100 py-2 d-flex align-items-center justify-content-center bg-white shadow-sm border"
+        className="btn w-100 py-3 d-flex align-items-center justify-content-center bg-white shadow-sm"
+        style={{
+          borderRadius: '0.75rem',
+          border: '1.5px solid rgba(197, 168, 128, 0.45)',
+          minHeight: '48px',
+          transition: 'all 0.2s ease',
+        }}
         onClick={handleGoogleSignIn}
         disabled={isLoading}
       >
@@ -70,7 +74,9 @@ export default function SocialAuthButtons() {
             />
           </svg>
         )}
-        <span className="fw-semibold text-dark">Continue with Google</span>
+        <span className="fw-semibold" style={{ color: '#182e26' }}>
+          Continue with Google
+        </span>
       </button>
     </div>
   );

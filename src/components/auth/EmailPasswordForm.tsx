@@ -40,9 +40,9 @@ export default function EmailPasswordForm() {
         const response = await loginWithEmail(values).unwrap();
         if (response.token && response.user) {
           dispatch(setCredentials({ user: response.user, token: response.token }));
-          setSuccessMessage(response.message || 'Login successful! Redirecting...');
+          setSuccessMessage(response.message || 'Welcome back to Anahata Spa!');
         } else {
-          setSuccessMessage('Logged in successfully!');
+          setSuccessMessage('Welcome back to Anahata Spa!');
         }
       } catch (err: unknown) {
         const apiError = err as { data?: { message?: string }; message?: string };
@@ -56,21 +56,21 @@ export default function EmailPasswordForm() {
   return (
     <form onSubmit={formik.handleSubmit} noValidate>
       {errorMessage && (
-        <div className="alert alert-danger d-flex align-items-center py-2 px-3 mb-3" role="alert">
+        <div className="alert alert-danger d-flex align-items-center py-2 px-3 mb-3 border-0 shadow-sm" role="alert">
           <i className="bi bi-exclamation-triangle-fill me-2"></i>
           <div className="small">{errorMessage}</div>
         </div>
       )}
 
       {successMessage && (
-        <div className="alert alert-success d-flex align-items-center py-2 px-3 mb-3" role="alert">
-          <i className="bi bi-check-circle-fill me-2"></i>
+        <div className="alert alert-success d-flex align-items-center py-2 px-3 mb-3 border-0 shadow-sm" role="alert">
+          <i className="bi bi-flower1 me-2 fs-5 text-success"></i>
           <div className="small">{successMessage}</div>
         </div>
       )}
 
       <div className="mb-3">
-        <label htmlFor="email" className="form-label small fw-semibold">
+        <label htmlFor="email" className="form-label small fw-semibold" style={{ color: '#182e26' }}>
           Email address
         </label>
         <div className="input-group">
@@ -81,7 +81,7 @@ export default function EmailPasswordForm() {
             id="email"
             name="email"
             type="email"
-            placeholder="name@example.com"
+            placeholder="member@anahataspawellness.com"
             className={`form-control border-start-0 ${
               formik.touched.email && formik.errors.email ? 'is-invalid' : ''
             }`}
@@ -99,12 +99,13 @@ export default function EmailPasswordForm() {
 
       <div className="mb-3">
         <div className="d-flex justify-content-between align-items-center mb-1">
-          <label htmlFor="password" className="form-label small fw-semibold mb-0">
+          <label htmlFor="password" className="form-label small fw-semibold mb-0" style={{ color: '#182e26' }}>
             Password
           </label>
           <a
             href="#forgot-password"
-            className="text-primary text-decoration-none small"
+            className="text-decoration-none small fw-medium"
+            style={{ color: '#c5a880' }}
             onClick={(e) => {
               e.preventDefault();
               alert('Password reset link will be sent to your email.');
@@ -157,25 +158,25 @@ export default function EmailPasswordForm() {
             onChange={formik.handleChange}
           />
           <label className="form-check-label small text-muted" htmlFor="rememberMe">
-            Remember me on this device
+            Remember me on this sanctuary device
           </label>
         </div>
       </div>
 
       <button
         type="submit"
-        className="btn btn-primary w-100 py-2 fw-semibold d-flex align-items-center justify-content-center"
+        className="btn btn-spa-primary w-100 py-3 fw-semibold d-flex align-items-center justify-content-center shadow-sm"
         disabled={isLoading || !formik.isValid}
       >
         {isLoading ? (
           <>
             <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-            Signing in...
+            Opening Sanctuary...
           </>
         ) : (
           <>
+            <i className="bi bi-flower1 me-2"></i>
             Sign In with Email
-            <i className="bi bi-arrow-right ms-2"></i>
           </>
         )}
       </button>

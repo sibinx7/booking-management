@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import SpaNavbar from '@/components/layout/SpaNavbar';
 
 export const metadata: Metadata = {
-  title: 'Sign In | Secure Portal',
-  description: 'Access your account securely using Email, WhatsApp OTP, or Google',
+  title: 'Sign In | Anahata Exotic Spa & Wellness Sanctuary',
+  description: 'Sign in to access your luxury spa treatments, wellness bookings, and bespoke massage therapies.',
 };
 
 export default function LoginLayout({
@@ -12,46 +13,36 @@ export default function LoginLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="d-flex flex-column min-vh-100 bg-light">
-      {/* Auth Minimalist Header */}
-      <header className="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-2">
-        <div className="container">
-          <Link href="/" className="navbar-brand d-flex align-items-center text-dark fw-bold">
-            <span className="bg-primary text-white rounded p-1 me-2 d-inline-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px' }}>
-              <i className="bi bi-shield-lock-fill small"></i>
-            </span>
-            <span>SecureApp</span>
-          </Link>
-          <div className="d-flex align-items-center">
-            <Link href="/" className="btn btn-outline-secondary btn-sm">
-              <i className="bi bi-arrow-left me-1"></i> Back to Home
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className="spa-ambient-bg d-flex flex-column min-vh-100">
+      <SpaNavbar />
 
-      {/* Main Auth Content */}
+      {/* Main Content */}
       <main className="flex-grow-1 d-flex align-items-center justify-content-center py-5 px-3">
         {children}
       </main>
 
-      {/* Auth Footer */}
-      <footer className="bg-white border-top py-3 text-center text-muted small">
+      {/* Spa Luxury Footer */}
+      <footer className="bg-white border-top py-4 text-muted small mt-auto">
         <div className="container">
-          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <div>
-              &copy; {new Date().getFullYear()} SecureApp. All rights reserved.
+          <div className="row g-3 align-items-center">
+            <div className="col-12 col-md-6 text-center text-md-start">
+              <span className="fw-semibold text-dark">Anahata Exotic Spa & Sanctuary</span>
+              <p className="mb-0 text-muted" style={{ fontSize: '0.78rem' }}>
+                Organic Aromatherapy • Traditional Herbal Massage • Sound Bath Healing
+              </p>
             </div>
-            <div className="d-flex gap-3">
-              <Link href="#privacy" className="text-muted text-decoration-none">
-                Privacy Policy
-              </Link>
-              <Link href="#terms" className="text-muted text-decoration-none">
-                Terms of Service
-              </Link>
-              <Link href="#support" className="text-muted text-decoration-none">
-                Support
-              </Link>
+            <div className="col-12 col-md-6 text-center text-md-end">
+              <div className="d-flex justify-content-center justify-content-md-end gap-3">
+                <Link href="#privacy" className="text-muted text-decoration-none">
+                  Privacy Policy
+                </Link>
+                <Link href="#terms" className="text-muted text-decoration-none">
+                  Wellness Terms
+                </Link>
+                <Link href="#concierge" className="text-muted text-decoration-none">
+                  Spa Concierge
+                </Link>
+              </div>
             </div>
           </div>
         </div>

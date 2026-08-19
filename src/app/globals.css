@@ -1,68 +1,234 @@
 :root {
-  --bs-primary: #0d6efd;
-  --bs-primary-rgb: 13, 110, 253;
-  --auth-bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-[data-bs-theme="dark"] {
-  --auth-bg-gradient: linear-gradient(135deg, #121417 0%, #1e2227 100%);
+  /* Exotic Spa & Massage Luxury Color Palette */
+  --spa-sage-dark: #142620;
+  --spa-sage: #234539;
+  --spa-sage-light: #3d6857;
+  --spa-gold: #c5a880;
+  --spa-gold-bright: #d4af37;
+  --spa-gold-dark: #9c7844;
+  --spa-gold-light: #f3ebd9;
+  --spa-sand: #f8f6f0;
+  --spa-sand-card: #ffffff;
+  --spa-text-dark: #1b2622;
+  --spa-text-muted: #64726c;
+  --spa-terracotta: #c46b4e;
 }
 
 body {
   min-height: 100vh;
-  background-color: #f8f9fa;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--spa-sand);
+  color: var(--spa-text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.auth-wrapper {
+/* Exotic Spa Atmospheric Ambient Background */
+.spa-ambient-bg {
   min-height: 100vh;
-  display: flex;
+  background: 
+    radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, rgba(35, 69, 57, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #f9f7f2 0%, #ede6d8 100%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Luxury Spa Card */
+.spa-glass-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(197, 168, 128, 0.38);
+  border-radius: 1.25rem;
+  box-shadow: 
+    0 24px 48px -12px rgba(20, 38, 32, 0.1),
+    0 0 24px 0 rgba(197, 168, 128, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Distinct Button Styles */
+
+/* 1. Book / Sign Up Button (Radiant Warm Gold Glow) */
+.btn-spa-book-glow {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.85rem;
+  padding: 0.75rem 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--auth-bg-gradient);
 }
 
-.auth-card {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.btn-spa-book-glow:hover,
+.btn-spa-book-glow:focus {
+  background: linear-gradient(135deg, #e5be44 0%, #9e7308 100%);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
 }
 
-.auth-tabs .nav-link {
-  color: #6c757d;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  padding: 0.6rem 1rem;
+/* 2. Sign In Button (Crisp Minimal Emerald & Frosted Glass) */
+.btn-spa-signin-glass {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--spa-sage-dark) !important;
+  border: 1.5px solid var(--spa-sage);
+  border-radius: 0.85rem;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(20, 38, 32, 0.05);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-spa-signin-glass:hover,
+.btn-spa-signin-glass:focus {
+  background: var(--spa-sage-dark);
+  color: #ffffff !important;
+  border-color: var(--spa-sage-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(20, 38, 32, 0.2);
+}
+
+/* Primary Form Action Button */
+.btn-spa-primary {
+  background: linear-gradient(135deg, var(--spa-sage-dark) 0%, var(--spa-sage) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(20, 38, 32, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-spa-primary:hover,
+.btn-spa-primary:focus {
+  background: linear-gradient(135deg, #0d1a15 0%, var(--spa-sage-dark) 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(20, 38, 32, 0.3);
+}
+
+.btn-spa-signout {
+  background: rgba(196, 107, 78, 0.12);
+  color: var(--spa-terracotta);
+  border: 1.5px solid rgba(196, 107, 78, 0.35);
+  border-radius: 0.75rem;
+  font-weight: 600;
   transition: all 0.2s ease;
 }
 
-.auth-tabs .nav-link.active {
-  color: #0d6efd;
-  background-color: #e7f1ff;
+.btn-spa-signout:hover {
+  background: var(--spa-terracotta);
+  color: #ffffff;
+}
+
+/* Spa Photo Showcase Cards */
+.spa-photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  box-shadow: 0 12px 30px rgba(20, 38, 32, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spa-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(20, 38, 32, 0.16);
+}
+
+.spa-photo-card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spa-photo-card:hover img {
+  transform: scale(1.04);
+}
+
+.spa-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(20, 38, 32, 0.9) 0%, rgba(20, 38, 32, 0.4) 70%, transparent 100%);
+  color: #ffffff;
+}
+
+/* Tabs */
+.spa-nav-tabs .nav-link {
+  color: var(--spa-text-muted);
+  font-weight: 500;
+  border-radius: 0.65rem;
+  padding: 0.65rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.spa-nav-tabs .nav-link.active {
+  color: var(--spa-sage-dark);
+  background-color: var(--spa-gold-light);
   font-weight: 600;
 }
 
-.divider-with-text {
+/* Mobile & Touch Targets */
+.form-control,
+.form-select,
+.input-group-text {
+  min-height: 48px;
+  border-radius: 0.65rem;
+  border-color: rgba(197, 168, 128, 0.4);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--spa-gold);
+  box-shadow: 0 0 0 0.25rem rgba(197, 168, 128, 0.25);
+}
+
+/* Dividers */
+.divider-spa {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #6c757d;
+  color: var(--spa-text-muted);
   font-size: 0.85rem;
   margin: 1.5rem 0;
 }
 
-.divider-with-text::before,
-.divider-with-text::after {
+.divider-spa::before,
+.divider-spa::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.3);
 }
 
-.divider-with-text::before {
+.divider-spa::before {
   margin-right: 0.75em;
 }
 
-.divider-with-text::after {
+.divider-spa::after {
   margin-left: 0.75em;
+}
+
+/* Lotus Icon Badge */
+.lotus-badge {
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, var(--spa-sage) 0%, var(--spa-sage-dark) 100%);
+  color: var(--spa-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(20, 38, 32, 0.25);
 }
