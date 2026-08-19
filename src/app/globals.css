@@ -1,49 +1,68 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+  --auth-bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+[data-bs-theme="dark"] {
+  --auth-bg-gradient: linear-gradient(135deg, #121417 0%, #1e2227 100%);
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.auth-wrapper {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  justify-content: center;
+  background: var(--auth-bg-gradient);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.auth-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.auth-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.auth-tabs .nav-link.active {
+  color: #0d6efd;
+  background-color: #e7f1ff;
+  font-weight: 600;
+}
+
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.divider-with-text::before,
+.divider-with-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.divider-with-text::before {
+  margin-right: 0.75em;
+}
+
+.divider-with-text::after {
+  margin-left: 0.75em;
 }

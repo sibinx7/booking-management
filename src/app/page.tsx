@@ -1,69 +1,33 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="d-flex align-items-center justify-content-center min-vh-100 bg-light p-3">
+      <div className="card shadow-sm border-0 p-4 p-md-5 text-center" style={{ maxWidth: '540px' }}>
+        <div className="mb-4">
+          <div
+            className="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-circle mb-3"
+            style={{ width: '64px', height: '64px' }}
+          >
+            <i className="bi bi-shield-lock-fill fs-2"></i>
+          </div>
+          <h1 className="h3 fw-bold mb-2">Welcome to the App</h1>
+          <p className="text-muted">
+            Next.js App Router with Bootstrap 5, Redux Toolkit, Formik & Yup validation.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="d-grid gap-3">
+          <Link href="/login" className="btn btn-primary btn-lg py-2 fw-semibold">
+            <i className="bi bi-box-arrow-in-right me-2"></i>
+            Go to Login Page
+          </Link>
         </div>
-      </main>
-    </div>
+
+        <div className="mt-4 pt-3 border-top text-muted small">
+          Includes: Email & Password, WhatsApp OTP, and Google Authentication
+        </div>
+      </div>
+    </main>
   );
 }
