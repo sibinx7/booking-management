@@ -9,7 +9,8 @@ import { logout } from '@/store/slices/authSlice';
 
 const romanticExperiences = [
   {
-    id: 'couples-pavilion',
+    id: 'couples-retreat',
+    slug: 'couples-retreat',
     title: 'Candlelit Couples Sanctuary Retreat',
     subtitle: 'Private Pavilion • 120 mins',
     price: '$320 for two',
@@ -19,7 +20,8 @@ const romanticExperiences = [
       'Immerse in an intimate private garden suite with side-by-side warm aromatherapy massages, champagne, and gentle ambient flute melodies.',
   },
   {
-    id: 'warm-stone-ritual',
+    id: 'volcanic-stone-ritual',
+    slug: 'volcanic-stone-ritual',
     title: 'Sensual Volcanic Oil & Stone Therapy',
     subtitle: 'Full Body Harmony • 90 mins',
     price: '$185',
@@ -29,7 +31,8 @@ const romanticExperiences = [
       'Warm botanical ylang-ylang oils poured in continuous streams combined with smooth heated basalt stones for intense sensory release.',
   },
   {
-    id: 'tropical-petal-bath',
+    id: 'floral-petal-bath',
+    slug: 'floral-petal-bath',
     title: 'Exotic Floral Petal Bath & Elixir',
     subtitle: 'Hydrotherapy • 60 mins',
     price: '$140 for two',
@@ -43,6 +46,7 @@ const romanticExperiences = [
 const treatments = [
   {
     id: 1,
+    slug: 'royal-balinese-massage',
     title: 'Royal Balinese Herbal Massage',
     duration: '90 mins',
     price: '$165',
@@ -53,6 +57,7 @@ const treatments = [
   },
   {
     id: 2,
+    slug: 'ayurvedic-shirodhara',
     title: 'Ayurvedic Shirodhara & Abhyanga',
     duration: '90 mins',
     price: '$180',
@@ -63,6 +68,7 @@ const treatments = [
   },
   {
     id: 3,
+    slug: 'botanical-aromatherapy',
     title: 'Botanical Aromatherapy Bliss',
     duration: '60 mins',
     price: '$130',
@@ -73,6 +79,7 @@ const treatments = [
   },
   {
     id: 4,
+    slug: 'volcanic-stone-ritual',
     title: 'Warm Volcanic Stone Ritual',
     duration: '75 mins',
     price: '$150',
@@ -125,9 +132,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex gap-2">
-                  <Link href="/login" className="btn btn-spa-book-glow btn-sm px-3">
-                    <i className="bi bi-person-circle me-1"></i>
-                    My Profile
+                  <Link href="/services" className="btn btn-spa-book-glow btn-sm px-3">
+                    <i className="bi bi-calendar2-heart me-1"></i>
+                    Browse Menu
                   </Link>
                   <button
                     type="button"
@@ -143,9 +150,9 @@ export default function Home() {
           ) : (
             <div className="d-flex justify-content-center gap-3 flex-wrap">
               {/* Distinct Book / Sign Up Button */}
-              <Link href="/signup" className="btn btn-spa-book-glow py-3 px-4">
+              <Link href="/services" className="btn btn-spa-book-glow py-3 px-4">
                 <i className="bi bi-flower2 me-2"></i>
-                Book Experience / Sign Up
+                Explore Sanctuary Menu
               </Link>
               {/* Distinct Sign In Button */}
               <Link href="/login" className="btn btn-spa-signin-glass py-3 px-4">
@@ -175,7 +182,7 @@ export default function Home() {
           <div className="row g-4">
             {romanticExperiences.map((item) => (
               <div key={item.id} className="col-12 col-lg-4">
-                <div className="spa-photo-card h-100 bg-white">
+                <div className="spa-photo-card h-100 bg-white d-flex flex-column">
                   <div className="position-relative" style={{ height: '260px', width: '100%' }}>
                     <Image
                       src={item.image}
@@ -197,7 +204,7 @@ export default function Home() {
                       {item.badge}
                     </span>
                   </div>
-                  <div className="p-4 d-flex flex-column justify-content-between">
+                  <div className="p-4 d-flex flex-column flex-grow-1 justify-content-between">
                     <div>
                       <div className="d-flex justify-content-between align-items-center mb-1">
                         <span className="small fw-semibold text-muted">{item.subtitle}</span>
@@ -212,11 +219,11 @@ export default function Home() {
                     </div>
 
                     <Link
-                      href={isAuthenticated ? '/#reserve' : '/signup'}
+                      href={`/services/${item.slug}`}
                       className="btn btn-spa-book-glow w-100 py-2 btn-sm mt-2"
                     >
                       <i className="bi bi-calendar2-heart me-2"></i>
-                      Reserve This Journey
+                      View Rates & Reserve
                     </Link>
                   </div>
                 </div>
@@ -245,7 +252,7 @@ export default function Home() {
             {treatments.map((t) => (
               <div key={t.id} className="col-12 col-md-6 col-lg-3">
                 <div
-                  className="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white"
+                  className="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white d-flex flex-column"
                   style={{
                     transition: 'transform 0.2s ease',
                     border: '1px solid rgba(197, 168, 128, 0.3)',
@@ -275,15 +282,22 @@ export default function Home() {
                   </div>
                   <p className="text-muted small flex-grow-1 mb-3">{t.description}</p>
                   <Link
-                    href={isAuthenticated ? '/#book' : '/signup'}
+                    href={`/services/${t.slug}`}
                     className="btn btn-outline-secondary btn-sm w-100 py-2 fw-medium rounded-3"
                     style={{ borderColor: 'rgba(197, 168, 128, 0.6)' }}
                   >
-                    Select Treatment
+                    View Details & Rates
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-5">
+            <Link href="/services" className="btn btn-spa-primary px-4 py-3 fw-semibold">
+              <i className="bi bi-grid me-2"></i>
+              View Full Sanctuary Treatment Menu
+            </Link>
           </div>
         </div>
       </section>

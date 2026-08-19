@@ -59,13 +59,13 @@ export default function SpaNavbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#treatments" className="nav-link text-muted fw-medium px-2">
-                Treatments
+              <Link href="/services" className="nav-link text-muted fw-medium px-2">
+                All Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/#massage" className="nav-link text-muted fw-medium px-2">
-                Exotic Massage
+              <Link href="/services/couples-retreat" className="nav-link text-muted fw-medium px-2">
+                Couples Retreats
               </Link>
             </li>
           </ul>
